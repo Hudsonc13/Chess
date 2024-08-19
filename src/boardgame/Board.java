@@ -1,40 +1,34 @@
 package boardgame;
 
-public class Position {
+public class Board {
 	
 	private int coluna;
 	private int linha;
+	protected Piece[][] pieces;
 	
-	
-	public Position(int coluna, int linha) {
-		
+	public Board(int coluna, int linha) {
 		this.coluna = coluna;
 		this.linha = linha;
+		pieces = new Piece[linha][coluna];
 	}
-
 
 	public int getColuna() {
 		return coluna;
 	}
 
-
 	public void setColuna(int coluna) {
 		this.coluna = coluna;
 	}
-
 
 	public int getLinha() {
 		return linha;
 	}
 
-
 	public void setLinha(int linha) {
 		this.linha = linha;
 	}
 	
-	@Override
-	public String toString(){
-		return linha + ", " + coluna;
-	}
+	
+	
 
 }
